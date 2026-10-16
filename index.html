@@ -402,7 +402,7 @@
 
     // Sayt egasining email manzilini shu qatorga kiriting.
     // Misol: const NOTIFICATION_EMAIL = 'ismingiz@gmail.com';
-    const NOTIFICATION_EMAIL = 'your-email@example.com';
+    const NOTIFICATION_EMAIL = 'abdujalilovazkk@gmail.com';
 
     const today = new Date();
     const localDate = new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
@@ -508,7 +508,7 @@
     });
 
     async function sendEmailNotification({ dateText, dateISO, time, plan, dodgeCount }) {
-      if (!NOTIFICATION_EMAIL || NOTIFICATION_EMAIL === 'abdujalilovazkk@gmail.com') {
+      if (!NOTIFICATION_EMAIL || NOTIFICATION_EMAIL === 'your-email@example.com') {
         return {
           ok: false,
           message: 'Email sozlanmagan. NOTIFICATION_EMAIL qatoriga o‘z emailingizni kiriting.'
@@ -560,6 +560,7 @@
           body: JSON.stringify({
             _subject: 'Yangi uchrashuv tanlovi — ' + plan,
             _template: 'table',
+            _captcha: 'false',
             name: 'Kichkina taklif sayti tashrif buyuruvchisi',
             javob: 'Ha — uchrashuvga rozi bo‘ldi 💗',
             tanlangan_sana: dateText,
